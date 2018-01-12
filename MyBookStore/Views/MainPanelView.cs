@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MyBookStore
+namespace MyBookStore.Views
 {
-    public partial class Form1 : Form
+    public partial class MainPanelView : Form
     {
-        public Form1()
+        public MainPanelView()
         {
             InitializeComponent();
         }
