@@ -16,5 +16,27 @@ namespace MyBookStore.Views
         {
             InitializeComponent();
         }
+
+        private void MainPanelView_Load(object sender, EventArgs e)
+        {
+            lstData.Items.Add("Harry Potter");
+            lstData.Items.Add("El país de nunca jamás");
+            lstData.Items.Add("El principito");
+            lstData.Items.Add("El señor de los anillos");
+            lstData.Items.Add("La magia en los niños");
+            lstData.Items.Add("Lo que cuentan los abuelos");
+
+            
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            lstData.Items.Add(txtData.Text);
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -32,6 +32,8 @@
             this.lstData = new System.Windows.Forms.ListBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.lblData = new System.Windows.Forms.Label();
+            this.txtData = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -62,6 +64,7 @@
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "Agregar";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnClose
             // 
@@ -72,19 +75,42 @@
             this.btnClose.TabIndex = 3;
             this.btnClose.Text = "Cerrar";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // lblData
+            // 
+            this.lblData.AutoSize = true;
+            this.lblData.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblData.Location = new System.Drawing.Point(27, 364);
+            this.lblData.Name = "lblData";
+            this.lblData.Size = new System.Drawing.Size(62, 24);
+            this.lblData.TabIndex = 4;
+            this.lblData.Text = "Datos:";
+            // 
+            // txtData
+            // 
+            this.txtData.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtData.Location = new System.Drawing.Point(23, 391);
+            this.txtData.Name = "txtData";
+            this.txtData.Size = new System.Drawing.Size(334, 28);
+            this.txtData.TabIndex = 5;
             // 
             // MainPanelView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(511, 342);
+            this.ClientSize = new System.Drawing.Size(511, 425);
+            this.Controls.Add(this.txtData);
+            this.Controls.Add(this.lblData);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.lstData);
             this.Controls.Add(this.label1);
             this.Name = "MainPanelView";
             this.Text = "MainPanelView";
+            this.Load += new System.EventHandler(this.MainPanelView_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -94,5 +120,7 @@
         private System.Windows.Forms.ListBox lstData;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Label lblData;
+        private System.Windows.Forms.TextBox txtData;
     }
 }
